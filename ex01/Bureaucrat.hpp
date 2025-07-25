@@ -3,6 +3,8 @@
 #include <iostream>
 #include <string>
 #include <exception>
+#include "Form.hpp"
+class Form;
 
 class Bureaucrat{
 	private:
@@ -29,6 +31,7 @@ class Bureaucrat{
 	class GradeTooLowException : public std::exception{
 	virtual const char* what() const throw();
 	};
+	void signForm(Form &form);
 
 };
 std::ostream& operator<<(std::ostream& out, const Bureaucrat& b);
